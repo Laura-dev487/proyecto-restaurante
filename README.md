@@ -56,4 +56,4 @@ Entrá en la carpeta del proyecto.
 Abrí el archivo index.html en tu navegador favorito (o usá la extensión Live Server en VS Code).
 
 👩‍💻 Creado por
-**LauraDev — Diseño y desarrollo web a medida**
+LauraDev — Diseño y desarrollo web a medida
