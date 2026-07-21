@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contáctanos para reservas o consultas. Visítanos en Av. La Paz 123, Surquillo, Lima. Teléfono: +514237648.">
+    <meta name="keywords" content="contacto restaurante, reservas, ubicacion restaurante, telefono restaurante, lima">
+    <title>Contacto - Restaurante Sabor y Arte</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="libs/wow/animate.css">
+    <link rel="shortcut icon" href="img/logo3.png">
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lfl-w8sAAAAADICaTFiqQdgAFsB02BzGks7Q0K0"></script>
+    <script src="https://kit.fontawesome.com/e745d13dd1.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_es.min.js"></script>
+    <script src="libs/wow/wow.js"></script>
+    <script src="debug-form.js"></script>
+    <script src="js/funciones.js"></script>
+
+</head>
+
+<body class="pagina-contacto">
+    <header class="cabecera">
+        <div class="container">
+            <a href="index.html" class="link-logo">
+                <img src="img/logo3.png" class="logo">
+            </a>
+            <nav class="menu">
+                <a href="index.html#lacarta">La carta</a>
+                <a href="index.html#locales">Locales</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html" class="seleccionado">Contacto</a>
+            </nav>
+            <a href="#" class="hamb"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </header>
+    <main>
+        <section id="banner" class="banner-contacto">
+            <img class="banner-home" 
+                 src="img/atencion-993w.jpg"
+                    sizes="(max-width: 2040px) 100vw, 2040px"
+                    srcset="img/atencion-300w.jpg 300w,
+                            img/atencion-993w.jpg 993w,
+                            img/atencion-1533w.jpg 1533w,
+                            img/atencion-2040w.jpg 2040w"
+                    alt="imagen de contacto">
+            <div class="container">
+                <div class="fila">
+                    <div class="columna columna-50 columna-mb-100">
+                        <h1 class="centrar-texto">Contáctanos</h1>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="saltarina"><i class="fa-solid fa-chevron-down"></i></a>
+        </section>
+        <section id="contacto" class="seccion">
+            <div class="container">
+                <div class="fila">
+                    
+                    <div class="columna columna-50 columna-mb-100 sin-padding   ">
+                        <form onsubmit="return false" id="formcontacto" action="registro.php" method="post">
+                            <div class="form-bloques">
+                                <input id="nombre" class="form-input" type="text" placeholder="Nombre" name="nombre"
+                                    required>
+                            </div>
+                            <div class="form-bloques">
+                                <input id="email" class="form-input" type="email" placeholder="Email" name="email"
+                                    required>
+                            </div>
+                            <div class="form-bloques">
+                                <input id="asunto" class="form-input" type="text" placeholder="Asunto" name="asunto"
+                                    required>
+                            </div>
+                            <div class="form-bloques">
+                                <textarea id="mensaje" class="form-input" required name="mensaje"
+                                    placeholder="Mensaje"></textarea>
+                            </div>
+                            <div class="form-bloques form-bloque-boton">
+                                <!-- <input type="submit" value="Enviar" class="btn boton-amarillo btn-enviar"> -->
+
+                                <button class="btn boton-amarillo btn-enviar g-recaptcha"
+                                    data-sitekey="6Lfl-w8sAAAAADICaTFiqQdgAFsB02BzGks7Q0K0" data-callback='validando'
+                                    data-action='validate_form'>Enviar</button>
+                            </div>
+                        </form>
+
+                        </div>
+                        <div class="columna columna-50 columna-mb-100 derecha-texto columna-info-contacto orden">
+                            <h2>Av. La Paz 123 Surquillo, Lima-Perú</h2>
+                            <a href="tel:+514237648" class="telefono">teléfono: +514237648</a>
+                            <a href="mailto:nuevocorreo@gmail.com" class="email">nuevocorreo@gmail.com</a>
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="prefooter">
+            <div class="container">
+                <div class="fila">
+                    <div class="columna columna-100">
+                        <div class="mapa">
+                            <iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0"
+                                marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;
+                          height=400&amp;hl=en&amp;q=Av%20La%20Paz%20123%20Lima%20+()&amp;
+                          t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                                title="Ubicación de nuestro restaurante"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pie">
+            <div class="container">
+                <div class="fila">
+                    <div class="columna columna-33 empujar-33 empujar-mb-0 orden lista-redes">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                    <div class="columna columna-33 columna-mb-100">
+                        LauraDev &reg;2025
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="modal-mensaje" class="modal">
+        <div class="modal-content">
+            <span class="cerrar-modal">&times;</span>
+            <p id="modal-texto"></p>
+            <button class="boton-amarillo">Aceptar</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
