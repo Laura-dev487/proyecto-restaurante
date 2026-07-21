@@ -9,7 +9,7 @@ Una landing page moderna, atractiva e interactiva diseñada para la industria ga
 ## 🚀 Demo en vivo
 
 Podés ver la página funcionando acá:  
-👉 **[Ver proyecto en vivo](https://Laura-dev487/proyecto-restaurante)**
+👉 **[Ver proyecto en vivo]( https://laura-dev487.github.io/proyecto-restaurante/)**
 
 ---
 
