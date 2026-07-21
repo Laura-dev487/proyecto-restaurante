@@ -1,0 +1,2010 @@
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:"Montserrat", sans-serif;
+}
+
+body.menu-abierto {
+    overflow: hidden;
+    
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+.preloader{
+    background-color: #302104;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: block;
+    z-index: 9999;
+}
+
+.logo-latido{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+}
+
+.logo-latido img{
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    animation-name: palpitar;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes palpitar{
+    0% {transform: scale(1);opacity: 1;}
+    50%{transform: scale(1.5);opacity: 1.5;}
+    100%{transform: scale(1);opacity: 1;}
+}
+
+.container{
+    width: 73.12rem;
+    padding: 0 0.93rem 0 0.93rem;
+    margin: 0 auto;
+    
+}
+
+.container-full{
+    width: 100%;
+    padding: 0 0.93rem;
+}
+
+.fila{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+}
+
+.fila.fila-centrada{
+    justify-content: center;
+}
+
+.columna{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;   
+    vertical-align: top;
+}
+
+.columna p {
+    max-width: 80%; 
+    margin: 0 auto; 
+}
+
+.columna-100{
+    width: 100%;
+}
+
+.columna-mb-100 {
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+.columna-50{
+    width: 50%;
+    flex: 0 0 50%;
+}
+
+.columna-33{
+    width: 33.33%;
+    flex: 0 0 33.33%;
+   
+}
+
+.columna-25{
+    width: 25%;
+    flex: 0 0 25%;
+}
+
+.empujar-33{
+    margin-left: 33.33%;
+}
+
+.orden{
+    order: 2;
+}
+
+.sin-padding{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.contenedor-cuadrado{
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(7,19,48);
+    cursor: pointer;
+}
+
+.contenedor-cuadrado.contenido-cuadrado h2{
+    margin-top: 0;
+}
+
+.contenedor-cuadrado.cont-rec{
+    padding-bottom: 56.25%;
+}
+
+.contenedor-cuadrado img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease;
+    
+    }
+
+.contenedor-cuadrado:hover img{
+    opacity: 0.8;
+    filter: grayscale(1);
+    transform: scale(1.4) rotatex(10deg);
+}
+
+.contenedor-cuadrado .contenido-cuadrado{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding-right: 1.87rem;
+    padding-left: 1.87rem;
+    top: -100%;
+    color: #fff;
+    transition: all 0.5s ease;
+   
+}
+
+.mapa{
+    position: relative;
+    padding-bottom: 33.33%;
+    width: 100%;
+
+}
+
+.mapa iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.contenedor-cuadrado:hover .contenido-cuadrado{
+    top:50%;
+    transform: translateY(-50%);
+}
+
+a{
+    display: inline-block;
+}
+
+nav a{
+    margin-left: 0.46rem;
+    margin-right: 0.46rem;
+}
+
+section{
+    position: relative;
+}
+
+
+.cabecera{
+    padding-top: 0.93rem;
+    padding-bottom: 0.93rem;
+    background-color:transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.cabecera.scrolled {
+    background: rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cabecera.scrolled a {
+    color: #fff; 
+  }
+
+.cabecera .link-logo{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cabecera .link-logo .logo{
+    width: 3.75rem ;
+    height: auto ;
+ 
+   
+}
+
+.cabecera .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+       
+}
+
+.cabecera .menu{
+    margin-right: 2.5rem;
+   /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(7, 19,48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;*/
+}
+
+.cabecera .menu a{
+    margin-left:0.46rem;
+    margin-right:0.46rem;
+    color:#FFBD59;
+    font-size: 0.81rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing:0.125rem;
+    word-spacing: 0.31rem;
+}
+
+.cabecera .menu .seleccionado,
+.cabecera .menu a:hover{
+    color:#ffe979;
+}
+
+
+
+.cabecera .hamb{    
+    color:rgba(230, 154, 35, 1);
+    font-size: 2.5rem;
+    display: none;
+    text-decoration: none;
+     
+}
+
+.saltarina{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    border: 0.2rem solid #F5AB00;
+    color:#F5AB00 ;
+    text-decoration: none;
+    display: flex;
+    font-size: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: saltar;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.saltarina:hover{
+    animation-play-state: paused;
+}
+
+@keyframes saltar{
+    from{
+        bottom:3rem;
+    }
+    to{
+        bottom:5rem;
+    }
+}
+
+
+.seccion{
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+.derecha-texto{
+    text-align: right;
+    
+}
+
+.justificar-texto{
+    text-align: justify;
+}
+
+.inclinar-texto{
+    font-style: italic;
+}
+
+.importante{
+    font-style: italic;
+}
+
+.titulos{
+    margin-top: 0;
+    margin-bottom:2.5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    text-shadow: 0.06rem 0.06rem 0.06rem ;
+
+}
+
+.margin-arriba{
+    margin-top: 2.5rem;
+}
+
+
+.btn{
+    padding: 0.62rem 1.56rem;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1.25rem;
+    border-radius: 0.93rem;
+    border-width: 0.125rem;
+    border-style: solid;
+    transition: all 0.5s ease;
+    
+}
+
+.btn-circulo{
+    width: 2.5rem;
+    height: 2.5rem;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.31rem;
+    font-size: 1.25rem;
+    border-radius: 100%;
+    border-width: 0.125rem;
+    border-style: solid;
+    text-decoration: none;
+    transition: all 0.5s ease;
+
+
+}
+
+.btn-circulo.borde-blanco{
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-circulo.borde-blanco:hover{
+    background-color: #fff;
+    color: #824C00;
+}
+    
+
+.btn.boton-transparente{
+    background-color: transparent;
+    border-color:#F5AB00;
+    color:#F5AB00;    
+
+}
+
+.btn.boton-transparente:hover{
+    background-color: #f09205;
+    border-color:#FFBD59;
+    color:#fff;    
+
+}
+
+.btn.boton-menu-transparente {
+   
+    background-color: rgba(245, 171, 0, 0.7); 
+    border-width: 2px; 
+    border-color: #F5AB00; 
+    color: #fff; 
+    text-shadow: none; 
+}
+
+.btn.boton-menu-transparente:hover {
+    background-color: #F5AB00;
+    border-color: #F5AB00;
+    color: #fff;
+}
+
+.btn.boton-amarillo{
+    background-color: #FFBD59;
+    border-color:#F5AB00;
+    color: #221E1B;
+}
+
+.btn.boton-amarillo:hover{
+    background-color: #824C00;
+    border-color:#824C00;
+    color: #F5AB00;
+}
+
+#banner{
+    background-color: #000;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; 
+}
+
+#banner .banner-home {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.8;
+}
+
+#banner.banner-nosotros .banner-home {
+    object-position: top;
+}
+
+#banner.banner-contacto .banner-home {
+   
+    object-position: center 20% !important; 
+}
+
+#banner .container {
+    position: absolute;
+    top: 30%;
+    left: 10%; 
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 2;
+    color: white;
+    text-align: left; 
+}
+
+#banner .container h1 {
+    font-size: 3.125rem;
+    color: #F5AB00;
+    margin: 0;
+}
+
+#banner .container p {
+    font-size: 1.25rem;
+    color: #F5AB00;
+    margin: 0;
+}
+
+#banner.banner-contacto {
+    position: relative;
+    overflow: hidden; 
+}
+
+#banner.banner-nosotros {
+    height: 65vh; 
+    position: relative; 
+    overflow: hidden;
+}
+
+#banner.banner-nosotros .container h1 {
+    font-size: 3rem; 
+    color: #fff;
+    text-shadow: 
+        1px 1px 2px #000000, 
+        0 0 10px rgba(0, 0, 0, 0.7); 
+    margin: 0;
+}
+
+#banner.banner-nosotros .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center; 
+    z-index: 2;
+}
+
+#banner.banner-nosotros .saltarina {
+    color: #fff;
+    border: 0.2rem solid #fff;
+}
+#cocineros {
+    margin-top: -3.75rem; 
+}
+
+
+
+#banner.banner-contacto .container {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 100%;
+ z-index: 2;
+ display: flex; 
+ justify-content: center;
+ align-items: center; 
+ flex-direction: column; 
+}
+
+
+#banner.banner-contacto .container .fila {
+ width: 100%;
+ justify-content: center; 
+}
+
+#banner.banner-contacto .container h1 {
+ text-align: center; 
+}
+
+
+#banner.banner-contacto {
+    height: 50vh; 
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+#banner.banner-contacto h1{
+    
+   font-size: 3.125rem;
+    color: #ffffff;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5), 0px 0px 15px #e5c100;
+    margin: 0;
+    font-weight: bold;
+}
+
+#banner.banner-contacto .saltarina{
+    color: #ffffff;
+    border: 0.2rem solid #ffffff;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5), 0px 0px 15px #e5c100;
+}
+
+#banner .container p{
+    font-size: 1.25rem;
+    color: #f7be3a;
+    margin: 0;
+}
+
+#lacarta{
+    position: relative;
+    background-color: #fbd170;
+    width: 100vw;
+    margin: 0 auto;    
+    
+}
+
+
+.menu-desplegable {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 37.5rem;
+    background-color: #F5F5F5; 
+    padding: 2rem;
+    box-shadow: 0 0 0.62rem rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    border-radius: 1rem;
+    text-align: center;
+    border: 0.125rem solid #FFBD59; 
+}
+
+.menu-contenido {
+    background-color: #F5F5F5;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    max-width: 37.5rem;
+    text-align: left; 
+    max-height: 80vh; 
+    overflow-y: auto; 
+    min-width: 34.37rem;
+   
+   
+}
+
+
+.menu-contenido::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+
+.menu-contenido::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+}
+
+
+.menu-contenido::-webkit-scrollbar-thumb {
+    background-color: #FFBD59; 
+    border-radius: 0.25rem; 
+}
+
+
+.menu-contenido::-webkit-scrollbar-thumb:hover {
+    background-color: #F5AB00; 
+}
+
+
+.menu-contenido {
+    scrollbar-color: #FFBD59 #f1f1f1; 
+    scrollbar-width: thin; 
+}
+
+.menu-desplegable h2 {
+    color:#824C00 ;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+.nombre-plato {
+    font-weight: bold;
+}
+
+
+.menu-desplegable ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    padding-right: 1rem; 
+    
+}
+
+.menu-desplegable li {
+    color:#221E1B; 
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+.cerrar-menu {
+    background-color: #FFBD59;
+    border-color: #F5AB00;
+    color: #221E1B;
+    padding: 0.62rem 1.56rem;
+    font-size: 1rem;
+    border-radius: 0.93rem;
+    border-width: 0.125rem;
+    border-style: solid;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.cerrar-menu:hover {
+    background-color: #824C00;
+    border-color: #824C00;
+    color: #F5AB00;
+}
+
+
+
+#locales ul{
+    list-style-position:inside;
+    padding-left: 0;
+    list-style: none;    
+    line-height: 1.3;
+    columns: 3;
+
+   
+}
+
+.modal-local {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+    background-color: #F5F5F5;
+    border: 2px solid #FFBD59;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: none; 
+}
+
+.modal-local.is-open {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    display: block;
+}
+
+.modal-local h2 {
+    color: #824C00;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.modal-local p {
+    color: #221E1B;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.cerrar-local {
+    background-color: #FFBD59;
+    border-color: #F5AB00;
+    color: #221E1B;
+    padding: 0.62rem 1.56rem;
+    font-size: 1rem;
+    border-radius: 0.93rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.5s ease;
+    border-width: 0.125rem;
+    border-style: solid;
+}
+
+.cerrar-local:hover {
+    background-color: #824C00;
+    border-color: #824C00;
+    color: #F5AB00;
+}
+
+
+
+#servicios .contenedor-serv{
+    text-align: center;
+    background-color:#FFBD59 ;
+    padding: 2.5rem 1.25rem;
+    height: 100%;
+    border-radius: 0.93rem;
+    box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem #fb9e13;
+    transition: all 0.5s ease;
+}
+
+#servicios .contenedor-serv:hover{
+    box-shadow: 0.06rem 0.06rem 1.25rem 0rem rgba(230, 120, 0, 0.75 );
+}
+
+#servicios .contenedor-serv i{
+    font-size: 2.5rem;
+    transition: all 0.5s ease;
+}
+
+#servicios .contenedor-serv:hover i{
+    transform: scale(1.5,1.5);
+}
+
+
+.lista-iconos li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.62rem;
+}
+
+.icono {
+  width: 0.87rem;
+  height: auto;
+}
+
+.video-fondo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    filter: grayscale(1);
+    opacity: 0.5;
+
+}
+
+
+#testimonio {
+    position: relative;
+    background-color: #824C00;
+    color: #fff;
+    line-height: 1.5;
+    min-height: 300px;
+    height: auto;
+    padding: 2rem 1rem;
+    overflow: hidden;
+    
+    
+}
+
+#testimonio .container {
+    position: relative;
+    z-index: 10;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.owl-carousel {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    min-height: 180px;
+}
+
+
+.owl-carousel .item {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.owl-carousel .item p {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+.owl-carousel .item h4 {
+    color: white;
+    font-size: 1em;
+}
+
+
+.owl-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    
+}
+
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;    
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;    
+    width: 50px; 
+    height: 50px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.owl-nav button.owl-prev { 
+    left: 10px; 
+}
+.owl-nav button.owl-next { 
+    right: 10px; 
+}
+
+
+.owl-nav button.owl-prev span,
+.owl-nav button.owl-next span {
+    font-size: 3.5rem; 
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+
+.owl-nav button:hover {
+    background: transparent !important; 
+    border-radius: 50%; 
+}
+
+
+.owl-nav button:hover span {
+    transform: scale(1.2);
+}
+
+
+
+#testimonio p {
+    margin-bottom: 0;
+}
+
+
+.titulo-acordion{
+    padding: 1rem;
+    padding-right: 4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    background-color: #FFBD59;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    cursor:pointer;
+    margin-bottom: 0;
+}
+
+.titulo-acordion:first-child{
+    margin-top: 0;
+}
+
+.titulo-acordion i{
+    position: absolute;
+    font-size: 2rem;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cuerpo-acordion{
+    padding: 2rem 1rem;
+    display: none;
+    border: 0.2rem solid #FFBD59;
+}
+
+
+
+footer .prefooter{
+    position: relative;
+    bottom: -4rem;
+}
+
+footer .pie{
+    color: #fff;
+    padding-bottom: 1rem;
+    background-color:rgb(34,30,27);
+    padding-top: 5rem;
+
+}
+
+footer .pie-nosotros a,
+footer .pie a{
+    color: #fff;
+}
+
+footer .pie .lista-redes{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+footer .pie .lista-redes a{
+    margin-left: 1.7rem;
+    font-size: 1.3rem;
+}
+
+footer .pie-nosotros{
+    color: #fff;
+    padding-bottom: 1rem;
+    background-color: rgb(34,30,27);
+    padding-top: 2rem;
+
+}
+
+footer .pie-nosotros .lista-redes{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+footer .pie-nosotros .lista-redes a{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+footer .pie .columna-33{
+    font-size: 1.2rem;
+}
+
+
+
+#cocineros .columna-cocinero{
+    position: relative;
+    padding-bottom: 25.25%;
+    width: 100%;
+}
+
+#cocineros .columna-cocinero-info{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
+
+#cocineros .columna-cocinero img{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#cocineros .columna-cocinero-info h2{
+    color:#6C4600;
+    font-size: 3rem;
+    margin-top: 0;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+#cocineros .columna-cocinero-info p{
+    font-style: italic;
+    margin-top: 1rem;
+
+}
+
+#cocineros .columna-cocinero-info h2,
+#cocineros .columna-cocinero-info p {
+    text-align: left; 
+    margin-left: 0;   
+    margin-right: auto; 
+}
+
+#cocineros .columna-cocinero-info.derecha-texto h2,
+#cocineros .columna-cocinero-info.derecha-texto p {
+    text-align: right; 
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+.form-bloques{
+    display: block;
+    margin-bottom: 1rem;
+
+}
+
+.form-bloques .form-input{
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    border:0.13rem solid #F5AB00;
+    color: #6C4600;
+    transition: all 0.5s ease ;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-bloques .form-input:focus{
+    outline: 0.13rem solid #F5AB00;
+    box-shadow: 0.1rem 0.1rem 1rem 0rem #F5AB00;
+   
+}
+
+
+::-webkit-input-placeholder { 
+  color: #6C4600;
+}
+
+.form-bloques textarea.form-input{
+    height: 6rem;
+    resize: none;
+
+}
+
+
+/* ==================================================== */
+/* 🚀 BLOQUE CONSOLIDADO PARA LA SECCIÓN #CONTACTO (ESCRITORIO) */
+/* (Reemplaza todos los estilos anteriores de #contacto) */
+/* ==================================================== */
+
+#contacto {
+    background-color: #FFF399;
+}
+
+#contacto #formcontacto {
+    /* 1. Definir un ancho máximo más angosto */
+    max-width: 400px; /* Puedes ajustar este valor (ej: 400px o 500px) */
+    width: 100%; /* Asegura que el formulario sea responsivo hasta el max-width */
+    
+    /* 2. Centrar el formulario horizontalmente dentro de la columna de 50% */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- ESTILOS DEL CONTENEDOR PRINCIPAL (.fila) --- */
+#contacto .fila {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 1. ESTILOS DE LA COLUMNA DEL FORMULARIO (IZQUIERDA, 40%) */
+#contacto .columna-formulario {
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding-right: 20px;
+}
+
+#contacto .columna-formulario form {
+    width: 100%; /* MODIFICACIÓN: Forzamos al 100% del 40% de la columna */
+    max-width: none; /* Quitamos límites que lo hacían delgado */
+    margin: 0 auto;
+}
+
+
+/* 2. ESTILOS DE LA COLUMNA DE INFORMACIÓN (DERECHA, 60%) */
+#contacto .columna-info-contacto {
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding-left: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+/* --- ESTILOS INTERNOS DE LA COLUMNA DE INFORMACIÓN --- */
+#contacto .columna-info-contacto .texto-contacto {
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+    margin-left: 0;
+    color: #6C4600;
+}
+
+#contacto .columna-info-contacto h2,
+#contacto .columna-info-contacto .telefono,
+#contacto .columna-info-contacto .email {
+    color: #6C4600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+#contacto .columna-info-contacto .email {
+    margin: 0;
+}
+
+
+/* --- ESTILOS INTERNOS DEL FORMULARIO --- */
+#contacto  form,
+#contacto .columna-formulario .form-input,
+#contacto .columna-formulario textarea {
+    /* Aseguramos que los inputs ocupen el 100% del 40% de la columna */
+    width: 100%;
+    max-width: none; 
+}
+
+#contacto .form-input {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+}
+
+#contacto .btn-enviar {
+    width: 50%; 
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+#contacto .form-bloque-boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+
+
+#modal-mensaje {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+    background-color: #fcf8e3; 
+    margin: auto;
+    padding: 30px 40px;
+    border: 2px solid #ffc107; 
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(255, 193, 7, 0.4);
+    text-align: center;
+    position: relative;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+
+.modal-content p {
+    font-size: 1.2rem;
+    color: #6C4600;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.cerrar-modal {
+    color: #ffc107;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: #6C4600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-content .boton-amarillo {
+    background-color: #ffc107;
+    color: #000;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .boton-amarillo:hover {
+    background-color: #e0a800;
+}
+
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+
+
+
+@media(min-width:1200px){
+
+}
+
+@media(max-width:1199px){
+      .container{
+        width: 960px;
+   } 
+}
+
+@media(max-width:991px){
+    .container{
+        width: 750px;
+    }
+
+    #banner .container {
+        position: absolute; 
+        top: 35%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        width: 90%; 
+        text-align: center; 
+        padding-top: 2rem; 
+    }
+    
+    
+    #banner .container h1 {
+        font-size: 2.5rem;  
+        white-space: normal;
+        overflow: visible;  
+    }
+
+    
+    #banner .container p {
+        font-size: 1rem;
+        white-space: normal;
+        overflow: visible;
+    }
+    
+    
+    #banner .container .btn {
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+
+    #banner.banner-nosotros h1.centrar-texto {
+        font-size: 2rem; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        margin-bottom: 3rem;
+    }
+
+    #banner.banner-nosotros {
+        height: 100vh; 
+        position: relative;
+        overflow: hidden;
+}
+
+    
+
+    .pagina-nosotros #banner .saltarina {
+        bottom: 2rem;
+    }
+
+    #contacto .fila {
+        /* Deshacer el flex-direction: column del móvil */
+        flex-direction: row !important; 
+        /* Aseguramos que las columnas estén centradas verticalmente */
+        align-items: center; 
+        justify-content: space-between;
+    }
+
+    /* 2. RESTABLECER LA COLUMNA DE INFORMACIÓN (A la derecha en escritorio) */
+    #contacto .columna-info-contacto {
+        /* Anular el order: 1 de móvil, si ya tienes el order: 2 en el CSS de escritorio */
+        order: 2 !important; 
+        
+        /* Definir el ancho para tablet (usaremos 50% por simplicidad, puedes cambiarlo a 60%) */
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        
+        /* Asegurar que el texto se alinee a la izquierda (como en desktop) */
+        text-align: left !important;
+        /* Ajustar padding para separación lateral */
+        padding-left: 20px; 
+        margin-bottom: 0;
+    }
+
+    /* 3. RESTABLECER LA COLUMNA DEL FORMULARIO (A la izquierda en escritorio) */
+    #contacto .columna.columna-50 {
+        /* Anular el order: 2 de móvil, si ya tienes el order: 1 en el CSS de escritorio */
+        order: 1 !important;
+        
+        /* Definir el ancho para tablet (usaremos 50%, puedes cambiarlo a 40%) */
+        width: 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        
+        /* Eliminar el margin-top que tenías en móvil */
+        margin-top: 0;
+        
+        /* Ajustar el padding de la columna (si lo tenía en desktop) */
+        padding-right: 20px; 
+    }
+    
+    /* 4. RESTABLECER ALINEACIÓN INTERNA DEL TEXTO */
+    #contacto .columna-info-contacto h2,
+    #contacto .columna-info-contacto .telefono,
+    #contacto .columna-info-contacto .email {
+        /* Deshacer el centrado forzado y el margin: 0 auto; de móvil */
+        text-align: left;
+        margin: 0 0 0.8rem 0; /* Espaciado vertical sin margin lateral */
+        margin-bottom: 0.5rem;
+        margin-top: 0;
+    }
+
+
+
+   
+}
+
+@media(max-width:767px){
+
+   .container{
+    width: 100%;
+   
+   } 
+
+   .seccion{
+    padding-bottom:2.8rem;
+    padding-top:2.8rem;
+}
+
+   .columna-mb-50{
+    width: 50%;
+   }
+
+   .columna-mb-41{
+    width: 41.66%;
+   }
+
+   .columna-mb-33{
+    width: 33.33%;
+   }
+
+   .columna-mb-25{
+    width: 25%;
+   }
+
+   .columna-mb-16{
+    width: 16.66%;
+   }
+
+   .columna-mb-8{
+    width: 8.33%;
+   }
+
+   .columna-mb-100 {
+    width: 100% !important;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    box-sizing: border-box; 
+}
+
+
+
+   .empujar-mb-0{
+    margin-left: 0;
+   }
+
+   .fila {
+    
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important; 
+}
+
+/* Opcional pero recomendado: Asegura que la sección de contacto no tenga padding lateral */
+.seccion, .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+  
+  
+    .orden {
+          order: 0 !important; 
+    }
+
+    
+  .contenedor-cuadrado .contenido-cuadrado{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .columna-mb-100.sin-padding,
+  .sin-padding,
+  .columna.sin-padding,
+  .columna-50.sin-padding { /* Puedes dejar esta si quieres ser muy específico */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+  
+.titulos{
+    font-size: 3.75rem;
+ 
+}
+
+.cabecera.menu a{
+        display:none
+       
+    }
+
+.cabecera .menu a{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}    
+
+.cabecera .link-logo .logo{
+    width: 2.5rem ;
+    height: auto ;
+ 
+   
+}
+
+.cabecera .link-logo{
+    position: relative;
+    z-index: 2;
+}
+
+.cabecera .hamb{
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+ .pagina-nosotros .cabecera .hamb {
+        color:#F5AB00 ; 
+        display: block;
+        padding: 10px; 
+    }
+    
+    
+ .pagina-contacto .cabecera .hamb {
+        color: #F5AB00;         
+        padding: 10px; 
+        border-radius: 4px;
+        display: block; 
+    }
+
+    .saltarina {
+        display: none;
+    }
+    
+
+.cabecera .menu{
+    margin-right: 2.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(7, 19,48);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.cabecera .abierto{
+    transform: translateX(0);
+}
+
+#banner,
+#banner.banner-nosotros,
+#banner.banner-contacto{
+
+    height: 100vh;
+}
+
+#banner .container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+#banner .columna-50.columna-mb-100 {
+    width: 100%;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .container h1 {
+    font-size: 3.7rem; 
+    margin-bottom: 4.5rem;
+}
+
+#banner .container p{
+    font-size: 2rem;
+    
+}
+
+#banner.banner-nosotros h1{
+    
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+    
+}
+
+#banner.banner-nosotros .container h1 {
+    font-size: 3rem;
+}
+
+#banner.banner-contacto h1{
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+
+#lacarta .fila:nth-child(2){
+    padding: 0;
+}
+
+#lacarta{
+    padding-bottom: 0;
+  
+}
+
+#lacarta .contenedor-cuadrado{
+    margin-bottom: 0;
+}
+
+.contenedor-cuadrado img {
+    width: 100%;
+    display: block; /* Para evitar espacios bajo la imagen */
+}
+
+
+#lacarta .contenedor-cuadrado.cont-rec {
+    display: block !important;
+    padding-bottom: 100% !important; /* Técnica para hacer cuadrados/rectángulos responsivos */
+    height: auto !important; /* Anula cualquier height fijo de escritorio/tablet */
+    position: relative; 
+}
+
+/* 2. ASEGURAR QUE LA IMAGEN OCUPA EL CONTENEDOR */
+#lacarta .contenedor-cuadrado.cont-rec img {
+    /* Si la imagen desaparece, puede ser porque no está en el flujo o tiene tamaño 0 */
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute; /* Crucial si usas padding-bottom: 100% en el padre */
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+
+#lacarta .columna-50.columna-mb-100:nth-child(2) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+#locales,
+#locales .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.container-full {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Y anula el container-full dentro de locales, para máxima seguridad */
+#locales .container-full {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+
+
+#locales .contenedor-cuadrado{
+    margin-bottom: 0;
+   
+}
+
+#locales .contenedor-cuadrado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.5s ease;
+    z-index: 1; 
+}
+
+#locales .contenido-cuadrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center; 
+    width: 100%; 
+}
+#locales .contenido-cuadrado h2 {
+    color: #FFFFFF; 
+    font-size: 2.5rem;
+}
+
+
+#locales .contenedor-cuadrado:active::before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+#locales .fila-centrada .columna-mb-100 {
+    padding: 1.5rem;
+    
+  }
+
+  #locales .centrar-texto {
+    line-height: 1.6; 
+    margin-bottom: 1rem; 
+  }
+
+  #locales .lista-iconos li {
+    margin-bottom: 0.8rem; 
+  }
+
+  #locales h2.titulos {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    
+  }
+
+  #testimonio {
+    min-height: 300px;
+    padding: 1.5rem 1rem;
+  }
+
+  #testimonio .carousel .prev,
+#testimonio .carousel .next {
+    font-size: 2rem; 
+    bottom: 20px;
+    z-index: 20;
+}
+
+#testimonio .carousel .dots {
+    bottom: 10px;
+    z-index: 20;
+}
+  
+.contenedor-serv{
+    margin-bottom: 1.56rem;
+    height: auto;
+}
+
+#servicios .columna-mb-100 {
+    width:70%;
+    margin: 0 auto 1.5rem;
+  }
+
+ #servicios .titulos h2 {
+  text-align: center;
+}
+
+ #servicios .fila-centrada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ #servicios .fila {
+        display: flex;
+        flex-direction:column;
+        
+    }
+#servicios .contenedor-serv{
+    min-height: 20rem;
+    margin-bottom: 1rem;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+ 
+.seccion{
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+}
+
+.mapa{
+    padding-bottom: 70%;
+}
+
+
+ footer .pie .fila,
+ footer .pie-nosotros .fila {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom:1rem;
+        font-size: 1.3rem;
+    }
+
+  footer .pie .lista-redes,
+  footer .pie-nosotros .lista-redes {
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        gap: 1.25rem; 
+        margin-bottom: 0.93rem;
+        
+    } 
+ 
+    footer .pie .lista-redes a,
+    footer .pie-nosotros .lista-redes a{
+        margin-left: 1rem;
+        font-size: 1.7rem;
+    }
+    
+   footer .pie .columna-mb-100, 
+   footer .pie-nosotros .columna-mb-100 {
+        width: 100%;
+        text-align: center;
+        padding-top: 2rem;
+    } 
+    
+      footer .pie .lista-redes {
+        display: flex;
+        flex-direction: row;      
+        flex-wrap: nowrap;       
+        justify-content: center; 
+        gap: 1.25rem;                
+        width: 100%;
+        margin-bottom: 0.93rem;
+        
+    }
+
+
+    /* --- CORRECCIÓN ESPACIO COCINEROS (Mobile) --- */
+
+/* 1. ELIMINAR ESPACIO DEBAJO DE LA FOTO */
+#cocineros .columna-cocinero {
+    /* Elimina el margen en la parte inferior de la columna de la imagen */
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 2. ELIMINAR ESPACIO ENCIMA DEL TEXTO Y DAR AIRE LATERAL */
+#cocineros .columna-cocinero-info {
+    /* Elimina el margen en la parte superior de la columna del texto */
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+
+    /* Asegurar que el texto tenga un poco de aire a los lados si la columna es 100% ancha */
+    padding-left: 1.5rem !important; 
+    padding-right: 1.5rem !important;
+}
+    
+    #cocineros {
+        
+        margin-top: 0.3rem ; 
+    }
+
+
+
+    #cocineros .columna-cocinero-info p{
+         font-size: 1.2rem;
+}  
+
+#cocineros .columna-cocinero {
+    order: 1 !important; 
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    
+}
+
+#cocineros .container-full,
+#cocineros {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+#cocineros .columna-cocinero img {
+    
+    width: 100%;    
+    height: 300px !important;     
+    object-fit: cover;  
+    position: static !important;
+    display: block; 
+}
+
+
+#cocineros .columna-cocinero-info {
+    order: 2 !important;
+    padding-left: 1.5rem !important; 
+    padding-right: 1.5rem !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+
+} 
+
+
+/* ========================================================= */
+/* 📱 CORRECCIÓN FINAL - FORZAR ANCHO 100% EN CONTACTO */
+/* ========================================================= */
+
+/* 1. LA FILA: Apilar elementos */
+#contacto .fila {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* 2. COLUMNA DEL FORMULARIO (La primera) */
+/* 🔑 CLAVE: Usamos .columna.columna-50 para ganar la especificidad a la tablet */
+#contacto .columna.columna-50:nth-child(1) {
+    width: 100% !important;
+    flex: 0 0 100% !important; /* Forzar flex basis */
+    max-width: 100% !important; /* Romper el límite del 50% */
+    
+    order: 1 !important; 
+    padding-left: 0 !important; 
+    padding-right: 0 !important;
+    margin-bottom: 3rem !important; 
+}
+
+/* 3. COLUMNA DE INFORMACIÓN (La segunda) */
+/* También forzamos el ancho 100% aquí por seguridad */
+#contacto .columna-info-contacto {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    
+    order: 2 !important; 
+    padding-left: 1.5rem !important; 
+    padding-right: 1.5rem !important;
+}
+
+/* 4. EL FORMULARIO: Ocupar todo el espacio disponible */
+#contacto #formcontacto {
+    max-width: 100% !important; 
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 2rem !important; 
+    box-sizing: border-box;
+}
+
+/* 5. INPUTS: Ancho total */
+#contacto .form-input {
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+/* 6. QUITAR PADDING DE LA SECCIÓN */
+#contacto, 
+#contacto .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+
+}
+
+
+
+
