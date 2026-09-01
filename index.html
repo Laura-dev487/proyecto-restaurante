@@ -57,8 +57,7 @@
                     <div class="columna columna-50 columna-mb-100">
                         <h1 class="wow slideInLeft" data-wow-duration="2s">Lee nuestra carta</h1>
                         <p class="wow slideInLeft" data-wow-duration="2s">Tenemos los mejores platos para hoy</p>
-                        <a href="#lacarta" class="btn boton-transparente wow slideInLeft" data-wow-duration="2s">Ver
-                            carta</a>
+                       <a href="#" id="btn-ver-carta" class="btn boton-transparente wow slideInLeft ver-menu" data-wow-duration="2s" data-target="modal-carta-completa">Ver carta</a>
                     </div>
                 </div>
             </div>
@@ -435,6 +434,95 @@
             </div>
         </div>
     </footer>
+    <div id="modal-carta-completa" class="menu-desplegable" style="display:none;">
+    <div class="menu-contenido">
+        <h2>Nuestra Carta Completa</h2>
+        
+        <!-- Categoría 1: Carnes (como tu ejemplo) -->
+        <h3>Carnes</h3>
+        <ul>
+                <li><span class="nombre-plato">Bife de chorizo </span>con papas fritas</li>
+                <li><span class="nombre-plato">Ojo de bife</span> a la parrilla</li>
+                <li><span class="nombre-plato">Matambre de cerdo</span> a la pizza</li>
+                <li><span class="nombre-plato">Ribs de cerdo</span> con salsa barbacoa</li>
+                <li><span class="nombre-plato">Bife de lomo</span> al champiñón con papas </li>
+                <li><span class="nombre-plato">Cordero braseado</span> con romero y vegetales</li>
+                <li><span class="nombre-plato">Asado de tira</span> con batatas fritas</li>
+                <li><span class="nombre-plato">Entraña a la parrilla</span> con ensalada de rúcula </li>
+                <li><span class="nombre-plato">Medallón de cerdo</span> con puré de manzanas</li>
+                <li><span class="nombre-plato">Pollo deshuesado</span> a la parrilla con arroz </li>
+            </ul>
+
+        <!-- Categoría 2: Ensaladas -->
+        <h3>Ensaladas</h3>
+        <ul>
+            <li><span class="nombre-plato">Ensalada César:</span> lechuga, crutones, queso parmesano y aderezo César
+                </li>
+                <li><span class="nombre-plato">Ensalada de la casa:</span> espinaca, nueces, queso de cabra y vinagreta
+                    de miel</li>
+                <li><span class="nombre-plato">Ensalada Caprese:</span> tomates, mozzarella, albahaca fresca y aceite de
+                    oliva</li>
+                <li><span class="nombre-plato">Ensalada de quinoa </span>con vegetales asados y hummus</li>
+                <li><span class="nombre-plato">Ensalada de pollo</span> grillado con mix de verdes, palta y aderezo de
+                    mostaza</li>
+                <li><span class="nombre-plato">Ensalada de salmón ahumado</span> con queso crema y hojas verdes</li>
+                <li><span class="nombre-plato">Ensalada de lentejas</span> con vegetales frescos y limón</li>
+                <li><span class="nombre-plato">Ensalada de atún </span>con huevo duro, tomate y cebolla</li>
+                <li><span class="nombre-plato">Ensalada Waldorf:</span> manzana, apio, nueces, uvas y mayonesa</li>
+                <li><span class="nombre-plato">Ensalada griega:</span> pepino, tomate, cebolla morada, aceitunas y queso
+                    feta</li> 
+        </ul>
+
+        <!-- Categoría 3: Hamburguesas -->
+         <h3>Hamburguesas</h3>
+          <ul>
+                <li><span class="nombre-plato">Hamburguesa clásica:</span>carne de res, lechuga, tomate, cebolla y queso
+                </li>
+                <li><span class="nombre-plato">Hamburguesa con bacon</span> y queso cheddar.</li>
+                <li><span class="nombre-plato">Hamburguesa con huevo frito</span>y cebolla caramelizada.</li>
+                <li><span class="nombre-plato">Hamburguesa de pollo crispy </span>con aderezo ranch.</li>
+                <li><span class="nombre-plato">Hamburguesa vegana</span>de lentejas con palta y lechuga.</li>
+                <li><span class="nombre-plato">Hamburguesa con hongos</span> salteados y queso suizo.</li>
+                <li><span class="nombre-plato">Hamburguesa doble carne</span> doble queso.</li>
+                <li><span class="nombre-plato">Hamburguesa con queso azul </span>y rúcula</li>
+                <li><span class="nombre-plato">Hamburguesa mexicana:</span> guacamole, jalapeños y pico de gallo.</li>
+                <li><span class="nombre-plato">Hamburguesa con aros de cebolla</span>y salsa barbacoa</li>
+            </ul>
+        <!-- Categoría 4: Pastas -->
+         <h3>Pastas</h3>
+          <ul>
+                <li><span class="nombre-plato">Ravioles </span> de espinaca y ricota con salsa de tomate y albahaca.
+                </li>
+                <li><span class="nombre-plato">Ñoquis </span> de papa con salsa rosa.</li>
+                <li><span class="nombre-plato">Lasaña </span>de carne y bechamel.</li>
+                <li><span class="nombre-plato">Spaghetti </span>con albóndigas en salsa de tomate.</li>
+                <li><span class="nombre-plato">Fideos caseros </span>con pesto de albahaca y nueces.</li>
+                <li><span class="nombre-plato">Fetuccini </span> con pollo</li>
+                <li><span class="nombre-plato">Sorrentinos </span>de jamón y queso con salsa crema.</li>
+                <li><span class="nombre-plato">Canelones </span>de verdura gratinados.</li>
+                <li><span class="nombre-plato">Gnocchi </span>de calabaza con manteca y salvia.</li>
+                <li><span class="nombre-plato">Macarrones </span>con queso y bacon</li>
+            </ul>
+        <!-- Categoría 5: Postres -->
+         <h3>Postres</h3>
+           <ul>
+                <li><span class="nombre-plato">Tiramisu </span> de la casa</li>
+                <li><span class="nombre-plato">Flan casero </span> con dulce de leche y crema</li>
+                <li><span class="nombre-plato">Brownie </span>con helado de crema y salsa de chocolate</li>
+                <li><span class="nombre-plato">Cheesecake </span>de frutos rojos</li>
+                <li><span class="nombre-plato">Panqueques </span>con dulce de leche</li>
+                <li><span class="nombre-plato">Crumble de manzana </span> con helado de vainilla</li>
+                <li><span class="nombre-plato">Mousse de chocolate</span></li>
+                <li><span class="nombre-plato">Budín de pan </span></li>
+                <li><span class="nombre-plato">Helado artesanal </span>de chocolate, vainilla, frutilla, americana y
+                    dulce de leche</li>
+                <li><span class="nombre-plato">Ensalada de frutas </span></li>
+            </ul>
+
+        <button class="cerrar-menu" id="cerrar-carta-completa">Cerrar</button>
+    </div>
+</div>
+
     <div id="modal-carnes" class="menu-desplegable" style="display:none;">
         <div class="menu-contenido">
             <h2>Carnes</h2>

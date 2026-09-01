@@ -3,6 +3,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
+html {
+    scrollbar-gutter: stable;
+}
 
 body{
     font-family:"Montserrat", sans-serif;
@@ -10,7 +13,7 @@ body{
 
 body.menu-abierto {
     overflow: hidden;
-    
+      
 }
 
 
@@ -622,9 +625,24 @@ section{
     text-align: left; 
     max-height: 80vh; 
     overflow-y: auto; 
-    min-width: 34.37rem;
+    min-width: 34.37rem;  
    
-   
+}
+
+.menu-contenido h3 {
+    color: #c98a2c; 
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #c98a2c;
+    padding-bottom: 8px;
+    margin-top: 35px; 
+    margin-bottom: 15px;
+}
+
+
+.menu-contenido h3:first-of-type {
+    margin-top: 15px;
 }
 
 
