@@ -591,6 +591,7 @@ section{
     margin: 0;
 }
 
+
 #lacarta{
     position: relative;
     background-color: #fbd170;
@@ -599,8 +600,8 @@ section{
     
 }
 
-
 .menu-desplegable {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1481,9 +1482,6 @@ footer .pie .columna-33{
     padding-right: 1.25rem;
     box-sizing: border-box; 
 }
-
-
-
    .empujar-mb-0{
     margin-left: 0;
    }
@@ -1496,13 +1494,11 @@ footer .pie .columna-33{
     flex-wrap: nowrap !important; 
 }
 
-/* Opcional pero recomendado: Asegura que la sección de contacto no tenga padding lateral */
 .seccion, .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
-  
-  
+    
     .orden {
           order: 0 !important; 
     }
@@ -1516,7 +1512,7 @@ footer .pie .columna-33{
   .columna-mb-100.sin-padding,
   .sin-padding,
   .columna.sin-padding,
-  .columna-50.sin-padding { /* Puedes dejar esta si quieres ser muy específico */
+  .columna-50.sin-padding { 
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
@@ -1540,7 +1536,6 @@ footer .pie .columna-33{
 .cabecera .link-logo .logo{
     width: 2.5rem ;
     height: auto ;
- 
    
 }
 
@@ -1552,6 +1547,7 @@ footer .pie .columna-33{
 .cabecera .hamb{
     display: block;
     position: relative;
+    padding-right: 20px;
     z-index: 2;
 }
 
@@ -1597,6 +1593,8 @@ footer .pie .columna-33{
     transform: translateX(0);
 }
 
+
+
 #banner,
 #banner.banner-nosotros,
 #banner.banner-contacto{
@@ -1613,6 +1611,15 @@ footer .pie .columna-33{
     justify-content: center;
     align-items: center;
     text-align: center; 
+}
+
+#banner .container h1{
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+#banner .container p {
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px #000, 0 0 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 #banner .columna-50.columna-mb-100 {
@@ -1635,8 +1642,7 @@ footer .pie .columna-33{
     
 }
 
-#banner.banner-nosotros h1{
-    
+#banner.banner-nosotros h1{    
     text-align: center;
     margin: 0;
     padding: 0;
@@ -1645,14 +1651,38 @@ footer .pie .columna-33{
 }
 
 #banner.banner-nosotros .container h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
 #banner.banner-contacto h1{
     font-size: 4rem;
     text-align: center;
 }
+   .menu-desplegable {
+        width: 90%;
+        max-width: none;
+        padding: 1rem;
+    }
 
+    .menu-contenido {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        max-height: 80vh;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .menu-contenido h2 {
+        font-size: 1.5rem;
+    }
+
+    .menu-contenido h3 {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
 
 
 #lacarta .fila:nth-child(2){
@@ -1676,17 +1706,16 @@ footer .pie .columna-33{
 
 #lacarta .contenedor-cuadrado.cont-rec {
     display: block !important;
-    padding-bottom: 100% !important; /* Técnica para hacer cuadrados/rectángulos responsivos */
-    height: auto !important; /* Anula cualquier height fijo de escritorio/tablet */
+    padding-bottom: 100% !important; 
+    height: auto !important; 
     position: relative; 
 }
 
-/* 2. ASEGURAR QUE LA IMAGEN OCUPA EL CONTENEDOR */
-#lacarta .contenedor-cuadrado.cont-rec img {
-    /* Si la imagen desaparece, puede ser porque no está en el flujo o tiene tamaño 0 */
+
+#lacarta .contenedor-cuadrado.cont-rec img {   
     width: 100% !important;
     height: 100% !important;
-    position: absolute; /* Crucial si usas padding-bottom: 100% en el padre */
+    position: absolute; 
     top: 0;
     left: 0;
     object-fit: cover;
@@ -1717,9 +1746,6 @@ footer .pie .columna-33{
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
-
-
-
 
 #locales .contenedor-cuadrado{
     margin-bottom: 0;
@@ -1812,8 +1838,14 @@ footer .pie .columna-33{
  #servicios .fila-centrada {
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
 }
+
+#servicios .columna-50 {
+        width: 100% !important;
+        text-align: center !important;
+    }
 
  #servicios .fila {
         display: flex;

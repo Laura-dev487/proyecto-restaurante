@@ -23,37 +23,23 @@ var acciones = {
         jQuery("#lacarta .contenedor-cuadrado").click(acciones.obtenersrc);
         jQuery(".cabecera .menu a[href*='#']").click(acciones.irancla);
 
-        // Inicialización de jQuery Validator
-        jQuery("#formcontacto").validate({
-            rules: {
-                nombre: {
-                    required: true,
-                    minlength: 2
+       // Inicialización de jQuery Validator (solo si el formulario existe y la librería está cargada)
+        if (jQuery("#formcontacto").length > 0 && typeof jQuery.fn.validate === 'function') {
+            jQuery("#formcontacto").validate({
+                rules: {
+                    nombre: { required: true, minlength: 2 },
+                    email: { required: true, email: true },
+                    asunto: { required: true, minlength: 4 },
+                    mensaje: { required: true, minlength: 10 }
                 },
-                email: {
-                    required: true,
-                    email: true
+                errorPlacement: function(error, element) {
+                    error.insertAfter(element); 
                 },
-                asunto: {
-                    required: true,
-                    minlength: 4
-                },
-                mensaje: {
-                    required: true,
-                    minlength: 10
+                submitHandler: function(form) {
+                    return false; 
                 }
-            },
-            
-            errorPlacement: function(error, element) {
-                // Coloca el error fuera del input para no romper el layout CSS
-                error.insertAfter(element); 
-            },
-            
-            submitHandler: function(form) {
-                // Previene el envío HTML por defecto; reCAPTCHA llamará a validando(token)
-                return false; 
-            }
-        });
+            });
+        }
 
         // Eventos de Navegación, Acordeones y Modales
         jQuery(".cabecera .hamb").click(acciones.abrirMenuNav);
@@ -267,7 +253,7 @@ var acciones = {
     precarga: function() {
         jQuery(".preloader").fadeOut("slow");
         jQuery(".logo-latido").fadeOut("slow", function() {
-            jQuery("body").toggleClass("abierto");
+            jQuery("body").removeClass("abierto");
         });
 
         acciones.redimensionar();
